@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Righteous', cursive;
+			padding: 10px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #f7bed4;
+		}
+
+		.border {
+			border: 0px solid #c77393;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #db447e;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house" style="color: #f2b4b8;"></i> Home</a>
+		<a id="Library" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book" style="color: #f2b4b8;"></i> Library</a>
+		<a id="Nook" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open-reader" style="color: #f2b4b8;"></i> Reading Nook</a>
+		<a id="Trackers" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days" style="color: #f2b4b8;"></i> Trackers</a>
+		<a id="Authors" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-address-book" style="color: #f2b4b8;"></i> Authors</a>
+		<a id="Series" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-barcode" style="color: #f2b4b8;"></i> Series</a>
+		<a id="Journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-pen" style="color: #f2b4b8;"></i> Journal</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/alexhz/Hello-f47692dc02124025a996e27e12c074c2", '_blank').focus();
+			else if (id == "life-wiki")
+				window.open("https://www.notion.so/alexhz/Life-0979944b35654991acd5a09b6feec6c8", '_blank').focus();
+
+
+		}
+	</script>
+
+
+</body>
+
+</html>
